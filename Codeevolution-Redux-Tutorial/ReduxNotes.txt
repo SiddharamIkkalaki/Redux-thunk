@@ -1,0 +1,48 @@
+Redux: 
+1. Redux is a predictable state container for javascript apps.
+2. Redux is a library for javascript application.
+3. Redux stores state of your application
+4. Redux will store and manage application state
+5. In redux, all state transitions are explicit and it is possible to keep track of them.
+6. The changes to your application's state become predictable.
+
+Three core concepts:
+
+Store: Holds the state of ur application.
+Action: Describes the changes in the state of ur application.
+Reducer: Actually carries out the state transition depending on the action.
+
+Three principles:
+1. Mantain our application state in a single object which would be managed by redux store.
+2. The only way to change the state is to emit an action, action is an object describing what happened.
+     (Not allowed to change state directly)
+     {
+         type: INCREMENT
+     }
+3. Write pure reducer to specify how the state tree is transformed by actions.
+    Reducer - (PrevState, action) => newState
+
+Reducers: 
+- Specifies how the app's state changes in response to action sent to the store.
+- function that accepts state and action as arguments, and returns the next state of the application.
+- (PrevState, action) => newState
+
+Store: 
+- One store for the entire application.
+- Responsibilties: 
+1. Holds application state.
+2. Allows access to state via getState()
+3. Allows state to be updated via dispatch(action)
+4. Register listners via subscribe(listners)
+5. Handles unregistering of listners via the function returned by subscrbe(listner) 
+
+Middleware:
+1. Middleware extend redux with custom functionality.
+2. Provides a third-party extension point between dispatching an action and moment it reaches the reducer.
+3. Use middleware for performing logging, crash reporting, performing asynchronous tasks. 
+
+Actions:
+
+Synchronous: As sson as action was dispatched, the state was immediately updated
+Async Action: Asynchronous API calls to fetch data from an end point and use that data in ur application.
+
